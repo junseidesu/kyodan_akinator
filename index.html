@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <title>ダンイネーター</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <span class="brand" id="brand"></span>
+      <span class="qcount" id="qcount"></span>
+    </header>
+
+    <section class="stage">
+      <svg class="maestro" id="maestro" data-mood="idle" viewBox="0 0 160 170" aria-hidden="true">
+        <!-- 指揮棒の腕 -->
+        <g class="arm">
+          <path d="M112 118 L136 86" class="coat-stroke" stroke-width="13" stroke-linecap="round"/>
+          <circle cx="137" cy="84" r="7" class="skin"/>
+          <line x1="139" y1="81" x2="156" y2="44" class="baton" stroke-width="3" stroke-linecap="round"/>
+        </g>
+        <!-- 体 -->
+        <path d="M34 170 C36 128 52 112 80 110 C108 112 124 128 126 170 Z" class="coat"/>
+        <path d="M68 111 L80 150 L92 111 Z" class="shirt"/>
+        <path d="M70 114 L80 119 L70 124 Z M90 114 L80 119 L90 124 Z" class="tie"/>
+        <circle cx="80" cy="119" r="2.6" class="tie"/>
+        <!-- 頭 -->
+        <path d="M44 52 C30 40 38 22 50 24 C52 10 70 8 76 18 C84 6 104 10 104 24 C118 20 128 38 114 52 C124 60 118 74 112 70 L48 70 C40 76 34 60 44 52 Z" class="hair"/>
+        <ellipse cx="80" cy="66" rx="30" ry="34" class="skin"/>
+        <path d="M52 44 C60 34 100 34 108 44 C100 40 60 40 52 44 Z" class="hair"/>
+        <ellipse cx="60" cy="78" rx="6" ry="3.5" class="cheek"/>
+        <ellipse cx="100" cy="78" rx="6" ry="3.5" class="cheek"/>
+        <path d="M66 86 C72 82 76 84 80 86 C84 84 88 82 94 86" class="mustache" fill="none" stroke-width="4" stroke-linecap="round"/>
+
+        <!-- 表情 -->
+        <g class="face face-idle">
+          <path d="M62 56 L72 54 M88 54 L98 56" class="line" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="68" cy="66" r="3.4" class="ink"/><circle cx="92" cy="66" r="3.4" class="ink"/>
+          <path d="M72 93 Q80 98 88 93" class="line" fill="none" stroke-width="2.6" stroke-linecap="round"/>
+        </g>
+        <g class="face face-think">
+          <path d="M61 55 L72 51 M88 53 L99 55" class="line" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="70" cy="63" r="3.4" class="ink"/><circle cx="94" cy="63" r="3.4" class="ink"/>
+          <path d="M74 94 L86 93" class="line" fill="none" stroke-width="2.6" stroke-linecap="round"/>
+        </g>
+        <g class="face face-idea">
+          <path d="M61 50 L72 48 M88 48 L99 50" class="line" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="68" cy="65" r="5" class="eye-white"/><circle cx="92" cy="65" r="5" class="eye-white"/>
+          <circle cx="68" cy="65" r="2.8" class="ink"/><circle cx="92" cy="65" r="2.8" class="ink"/>
+          <ellipse cx="80" cy="95" rx="5" ry="5.5" class="ink"/>
+          <g class="spark"><path d="M22 30 l4 -10 l4 10 l10 4 l-10 4 l-4 10 l-4 -10 l-10 -4 Z"/></g>
+        </g>
+        <g class="face face-proud">
+          <path d="M61 55 L72 53 M88 53 L99 55" class="line" stroke-width="3" stroke-linecap="round"/>
+          <path d="M63 67 Q68 61 73 67 M87 67 Q92 61 97 67" class="line" fill="none" stroke-width="3" stroke-linecap="round"/>
+          <path d="M70 91 Q80 102 90 91 Z" class="ink"/>
+        </g>
+        <g class="face face-sad">
+          <path d="M62 53 L72 57 M88 57 L98 53" class="line" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="68" cy="67" r="3.2" class="ink"/><circle cx="92" cy="67" r="3.2" class="ink"/>
+          <path d="M72 97 Q80 91 88 97" class="line" fill="none" stroke-width="2.6" stroke-linecap="round"/>
+          <path d="M112 50 q5 8 0 12 q-5 -4 0 -12 Z" class="sweat"/>
+        </g>
+      </svg>
+      <div class="bubble" id="bubble" aria-live="polite"></div>
+    </section>
+
+    <section class="panel" id="panel"></section>
+  </main>
+
+  <template id="tpl-title">
+    <p class="tagline" data-tagline></p>
+    <button class="btn primary big" data-action="start">はじめる</button>
+    <p class="fine" data-count></p>
+  </template>
+
+  <template id="tpl-question">
+    <h1 class="question" data-question></h1>
+    <div class="answers">
+      <button class="btn ans yes" data-u="1">はい</button>
+      <button class="btn ans no" data-u="0">いいえ</button>
+      <button class="btn ans" data-u="null">わからない</button>
+      <button class="btn ans" data-u="0.75">たぶんそう</button>
+      <button class="btn ans" data-u="0.25">たぶん違う</button>
+    </div>
+    <div class="meter" title="確信度"><div class="meter-fill" data-meter></div></div>
+    <button class="btn ghost" data-action="undo">← 1つ前の質問に戻る</button>
+  </template>
+
+  <template id="tpl-guess">
+    <div class="card guess-card">
+      <div class="part-chip" data-part></div>
+      <div class="guess-name" data-name></div>
+      <div class="guess-sub" data-sub></div>
+    </div>
+    <div class="answers two">
+      <button class="btn ans yes" data-action="correct">はい！</button>
+      <button class="btn ans no" data-action="wrong">ちがう</button>
+    </div>
+  </template>
+
+  <template id="tpl-profile">
+    <div class="card profile">
+      <div class="part-chip" data-part></div>
+      <div class="guess-name" data-name></div>
+      <dl class="facts" data-facts></dl>
+      <div class="episodes-wrap">
+        <h2 class="episodes-title">エピソード</h2>
+        <ul class="episodes" data-episodes></ul>
+        <button class="btn ghost small" data-action="more" hidden>もっと見る</button>
+      </div>
+    </div>
+    <button class="btn primary big" data-action="restart">もう一回あそぶ</button>
+  </template>
+
+  <template id="tpl-giveup">
+    <input class="search" type="search" placeholder="あだ名で検索" data-search aria-label="あだ名で検索">
+    <div class="roster" data-roster></div>
+    <button class="btn ghost" data-action="restart">答えずにやり直す</button>
+  </template>
+
+  <script src="config.js"></script>
+  <script src="data/data.js"></script>
+  <script src="engine.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
