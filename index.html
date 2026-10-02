@@ -21,28 +21,29 @@
       <svg class="maestro" id="maestro" data-mood="idle" viewBox="0 0 160 170" aria-hidden="true">
         <!-- 後ろの足（左右に広がる） -->
         <g class="legs">
-          <path d="M42 122 Q24 132 13 125 M54 130 Q42 146 27 143 M118 122 Q136 132 147 125 M106 130 Q118 146 133 143" class="leg-edge"/>
-          <path d="M42 122 Q24 132 13 125 M54 130 Q42 146 27 143 M118 122 Q136 132 147 125 M106 130 Q118 146 133 143" class="leg"/>
-          <ellipse cx="14" cy="122" rx="6.5" ry="8" class="tip" transform="rotate(-30 14 122)"/>
-          <ellipse cx="26" cy="141" rx="6.5" ry="8" class="tip" transform="rotate(-60 26 141)"/>
-          <ellipse cx="146" cy="122" rx="6.5" ry="8" class="tip" transform="rotate(30 146 122)"/>
-          <ellipse cx="134" cy="141" rx="6.5" ry="8" class="tip" transform="rotate(60 134 141)"/>
+          <!-- 横の足 -->
+          <path d="M40 120 Q22 130 12 123 M52 128 Q40 144 26 141 M108 128 Q120 144 134 141" class="leg-edge"/>
+          <path d="M40 120 Q22 130 12 123 M52 128 Q40 144 26 141 M108 128 Q120 144 134 141" class="leg"/>
+          <!-- 前の足（体の下からちょこんと） -->
+          <path d="M68 126 Q64 144 54 150 M92 126 Q96 144 106 150" class="leg-edge"/>
+          <path d="M68 126 Q64 144 54 150 M92 126 Q96 144 106 150" class="leg"/>
+          <ellipse cx="13" cy="121" rx="6" ry="7.5" class="tip" transform="rotate(-30 13 121)"/>
+          <ellipse cx="25" cy="140" rx="6" ry="7.5" class="tip" transform="rotate(-60 25 140)"/>
+          <ellipse cx="135" cy="140" rx="6" ry="7.5" class="tip" transform="rotate(60 135 140)"/>
+          <ellipse cx="54" cy="149" rx="7.5" ry="6" class="tip" transform="rotate(-20 54 149)"/>
+          <ellipse cx="106" cy="149" rx="7.5" ry="6" class="tip" transform="rotate(20 106 149)"/>
+        </g>
+        <!-- 指揮棒を持つ右の足 -->
+        <g class="arm">
+          <path d="M124 106 Q142 104 147 88" class="leg-edge"/>
+          <path d="M124 106 Q142 104 147 88" class="leg"/>
+          <line x1="149" y1="84" x2="157" y2="46" class="baton" stroke-width="3" stroke-linecap="round"/>
+          <ellipse cx="147" cy="86" rx="6" ry="7.5" class="tip" transform="rotate(20 147 86)"/>
         </g>
         <!-- 体（ぬいぐるみのような平たい丸） -->
         <path d="M22 96 C22 56 48 36 80 36 C112 36 138 56 138 96 C138 124 114 136 80 136 C46 136 22 124 22 96 Z" class="tako"/>
         <ellipse cx="44" cy="106" rx="8" ry="5" class="cheek"/>
         <ellipse cx="116" cy="106" rx="8" ry="5" class="cheek"/>
-        <!-- 前の足（左。くるっと巻き上がる） -->
-        <path d="M68 131 Q50 142 44 124" class="leg-edge"/>
-        <path d="M68 131 Q50 142 44 124" class="leg"/>
-        <ellipse cx="44" cy="121" rx="7" ry="8.5" class="tip"/>
-        <!-- 指揮棒を持つ前の足（右） -->
-        <g class="arm">
-          <path d="M92 131 Q110 142 116 124" class="leg-edge"/>
-          <path d="M92 131 Q110 142 116 124" class="leg"/>
-          <line x1="118" y1="117" x2="148" y2="64" class="baton" stroke-width="3" stroke-linecap="round"/>
-          <ellipse cx="116" cy="121" rx="7" ry="8.5" class="tip"/>
-        </g>
         <!-- 蝶ネクタイ -->
         <path d="M69 124 L80 129 L69 134 Z M91 124 L80 129 L91 134 Z" class="tie"/>
         <circle cx="80" cy="129" r="3.2" class="tie"/>

@@ -96,7 +96,7 @@ body {
 .maestro[data-mood="idea"] .face-idea,
 .maestro[data-mood="proud"] .face-proud,
 .maestro[data-mood="sad"] .face-sad { display: inline; }
-.maestro .arm { transform-origin: 92px 131px; transform-box: view-box; }
+.maestro .arm { transform-origin: 124px 106px; transform-box: view-box; }
 .maestro .legs { transform-origin: 80px 128px; transform-box: view-box; }
 .maestro[data-mood="think"] .legs { animation: wiggle 2.4s ease-in-out infinite; }
 .maestro[data-mood="proud"] .legs { animation: wiggle .6s ease-in-out 2; }
