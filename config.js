@@ -1,6 +1,6 @@
 // アプリ名・キャラクター・セリフ（後で差し替える用）
 window.AKINATOR_CONFIG = {
-  appName: "ダンイネーター",
+  appName: "タコネーター",
   tagline: "団員を1人、心に思い浮かべたまえ。\n私が当ててみせよう。",
   characterName: "マエストロ",
   lines: {
