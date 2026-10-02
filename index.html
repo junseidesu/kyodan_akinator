@@ -19,24 +19,37 @@
 
     <section class="stage">
       <svg class="maestro" id="maestro" data-mood="idle" viewBox="0 0 160 170" aria-hidden="true">
-        <!-- 指揮棒の腕 -->
-        <g class="arm">
-          <path d="M112 118 L136 86" class="coat-stroke" stroke-width="13" stroke-linecap="round"/>
-          <circle cx="137" cy="84" r="7" class="skin"/>
-          <line x1="139" y1="81" x2="156" y2="44" class="baton" stroke-width="3" stroke-linecap="round"/>
+        <!-- 足（タコの脚） -->
+        <g class="legs">
+          <path d="M52 92 C38 108 26 118 28 138 C30 150 22 156 14 152" class="leg"/>
+          <path d="M60 98 C52 118 46 132 50 150 C52 160 46 166 38 164"  class="leg"/>
+          <path d="M72 100 C70 122 68 140 74 156 C77 164 72 168 66 167" class="leg"/>
+          <path d="M88 100 C90 122 92 140 86 156 C83 164 88 168 94 167" class="leg"/>
+          <path d="M100 98 C108 118 114 132 110 150 C108 160 114 166 122 164" class="leg"/>
+          <g class="suckers">
+            <circle cx="30" cy="132" r="2.4"/><circle cx="27" cy="143" r="2.2"/>
+            <circle cx="48" cy="140" r="2.4"/><circle cx="49" cy="151" r="2.2"/>
+            <circle cx="70" cy="140" r="2.4"/><circle cx="72" cy="151" r="2.2"/>
+            <circle cx="90" cy="140" r="2.4"/><circle cx="88" cy="151" r="2.2"/>
+            <circle cx="112" cy="140" r="2.4"/><circle cx="111" cy="151" r="2.2"/>
+          </g>
         </g>
-        <!-- 体 -->
-        <path d="M34 170 C36 128 52 112 80 110 C108 112 124 128 126 170 Z" class="coat"/>
-        <path d="M68 111 L80 150 L92 111 Z" class="shirt"/>
-        <path d="M70 114 L80 119 L70 124 Z M90 114 L80 119 L90 124 Z" class="tie"/>
-        <circle cx="80" cy="119" r="2.6" class="tie"/>
+        <!-- 指揮棒を持つ足 -->
+        <g class="arm">
+          <path d="M106 90 C122 92 130 90 136 84" class="leg"/>
+          <circle cx="133" cy="88" r="2.2" class="sucker"/>
+          <line x1="138" y1="81" x2="156" y2="44" class="baton" stroke-width="3" stroke-linecap="round"/>
+        </g>
         <!-- 頭 -->
-        <path d="M44 52 C30 40 38 22 50 24 C52 10 70 8 76 18 C84 6 104 10 104 24 C118 20 128 38 114 52 C124 60 118 74 112 70 L48 70 C40 76 34 60 44 52 Z" class="hair"/>
-        <ellipse cx="80" cy="66" rx="30" ry="34" class="skin"/>
-        <path d="M52 44 C60 34 100 34 108 44 C100 40 60 40 52 44 Z" class="hair"/>
-        <ellipse cx="60" cy="78" rx="6" ry="3.5" class="cheek"/>
-        <ellipse cx="100" cy="78" rx="6" ry="3.5" class="cheek"/>
-        <path d="M66 86 C72 82 76 84 80 86 C84 84 88 82 94 86" class="mustache" fill="none" stroke-width="4" stroke-linecap="round"/>
+        <path d="M36 62 C36 26 56 10 80 10 C104 10 124 26 124 62 C124 86 106 102 80 102 C54 102 36 86 36 62 Z" class="tako"/>
+        <ellipse cx="62" cy="28" rx="7" ry="4.5" class="spot" transform="rotate(-25 62 28)"/>
+        <circle cx="104" cy="34" r="3.5" class="spot"/>
+        <circle cx="96" cy="22" r="2.2" class="spot"/>
+        <ellipse cx="58" cy="80" rx="6.5" ry="3.8" class="cheek"/>
+        <ellipse cx="102" cy="80" rx="6.5" ry="3.8" class="cheek"/>
+        <!-- 蝶ネクタイ -->
+        <path d="M68 100 L80 105 L68 110 Z M92 100 L80 105 L92 110 Z" class="tie"/>
+        <circle cx="80" cy="105" r="3" class="tie"/>
 
         <!-- 表情 -->
         <g class="face face-idle">
