@@ -80,8 +80,6 @@ body {
 .maestro .leg { fill: none; stroke: var(--tako); stroke-width: 17; stroke-linecap: round; }
 .maestro .suckers circle, .maestro .sucker { fill: var(--sucker); }
 .maestro .spot { fill: var(--spot); opacity: .8; }
-.maestro .shine { fill: #fff; opacity: .45; }
-.maestro .hl { fill: #fff; }
 .maestro .tongue { fill: #ff8fa3; }
 .maestro .tie { fill: var(--bowtie); }
 .maestro .cheek { fill: var(--cheek); opacity: .75; }
