@@ -19,66 +19,67 @@
 
     <section class="stage">
       <svg class="maestro" id="maestro" data-mood="idle" viewBox="0 0 160 170" aria-hidden="true">
-        <!-- 足（タコの脚） -->
+        <!-- 足（短くてぷにっとした脚） -->
         <g class="legs">
-          <path d="M52 92 C38 108 26 118 28 138 C30 150 22 156 14 152" class="leg"/>
-          <path d="M60 98 C52 118 46 132 50 150 C52 160 46 166 38 164"  class="leg"/>
-          <path d="M72 100 C70 122 68 140 74 156 C77 164 72 168 66 167" class="leg"/>
-          <path d="M88 100 C90 122 92 140 86 156 C83 164 88 168 94 167" class="leg"/>
-          <path d="M100 98 C108 118 114 132 110 150 C108 160 114 166 122 164" class="leg"/>
+          <path d="M40 110 Q28 128 18 128" class="leg"/>
+          <path d="M55 120 Q50 138 40 144" class="leg"/>
+          <path d="M71 124 Q70 142 62 151" class="leg"/>
+          <path d="M89 124 Q90 142 98 151" class="leg"/>
+          <path d="M105 120 Q110 138 120 144" class="leg"/>
           <g class="suckers">
-            <circle cx="30" cy="132" r="2.4"/><circle cx="27" cy="143" r="2.2"/>
-            <circle cx="48" cy="140" r="2.4"/><circle cx="49" cy="151" r="2.2"/>
-            <circle cx="70" cy="140" r="2.4"/><circle cx="72" cy="151" r="2.2"/>
-            <circle cx="90" cy="140" r="2.4"/><circle cx="88" cy="151" r="2.2"/>
-            <circle cx="112" cy="140" r="2.4"/><circle cx="111" cy="151" r="2.2"/>
+            <circle cx="24" cy="129" r="2.2"/><circle cx="44" cy="141" r="2.2"/>
+            <circle cx="65" cy="146" r="2.2"/><circle cx="95" cy="146" r="2.2"/>
+            <circle cx="116" cy="141" r="2.2"/>
           </g>
         </g>
         <!-- 指揮棒を持つ足 -->
         <g class="arm">
-          <path d="M106 90 C122 92 130 90 136 84" class="leg"/>
-          <circle cx="133" cy="88" r="2.2" class="sucker"/>
-          <line x1="138" y1="81" x2="156" y2="44" class="baton" stroke-width="3" stroke-linecap="round"/>
+          <path d="M126 100 Q140 98 144 86" class="leg"/>
+          <circle cx="139" cy="95" r="2.2" class="sucker"/>
+          <line x1="146" y1="82" x2="158" y2="46" class="baton" stroke-width="3" stroke-linecap="round"/>
         </g>
-        <!-- 頭 -->
-        <path d="M36 62 C36 26 56 10 80 10 C104 10 124 26 124 62 C124 86 106 102 80 102 C54 102 36 86 36 62 Z" class="tako"/>
-        <ellipse cx="62" cy="28" rx="7" ry="4.5" class="spot" transform="rotate(-25 62 28)"/>
-        <circle cx="104" cy="34" r="3.5" class="spot"/>
-        <circle cx="96" cy="22" r="2.2" class="spot"/>
-        <ellipse cx="58" cy="80" rx="6.5" ry="3.8" class="cheek"/>
-        <ellipse cx="102" cy="80" rx="6.5" ry="3.8" class="cheek"/>
+        <!-- 頭（おもち型） -->
+        <path d="M24 84 C24 40 48 18 80 18 C112 18 136 40 136 84 C136 112 112 126 80 126 C48 126 24 112 24 84 Z" class="tako"/>
+        <ellipse cx="52" cy="42" rx="11" ry="6" class="shine" transform="rotate(-30 52 42)"/>
+        <circle cx="104" cy="32" r="4.5" class="spot"/>
+        <circle cx="116" cy="46" r="2.8" class="spot"/>
+        <circle cx="94" cy="24" r="2.2" class="spot"/>
+        <ellipse cx="48" cy="100" rx="9" ry="5.5" class="cheek"/>
+        <ellipse cx="112" cy="100" rx="9" ry="5.5" class="cheek"/>
         <!-- 蝶ネクタイ -->
-        <path d="M68 100 L80 105 L68 110 Z M92 100 L80 105 L92 110 Z" class="tie"/>
-        <circle cx="80" cy="105" r="3" class="tie"/>
+        <path d="M66 117 L80 124 L66 131 Z M94 117 L80 124 L94 131 Z" class="tie"/>
+        <circle cx="80" cy="124" r="3.6" class="tie"/>
 
         <!-- 表情 -->
         <g class="face face-idle">
-          <path d="M62 56 L72 54 M88 54 L98 56" class="line" stroke-width="3" stroke-linecap="round"/>
-          <circle cx="68" cy="66" r="3.4" class="ink"/><circle cx="92" cy="66" r="3.4" class="ink"/>
-          <path d="M72 93 Q80 98 88 93" class="line" fill="none" stroke-width="2.6" stroke-linecap="round"/>
+          <ellipse cx="62" cy="86" rx="6.5" ry="8" class="ink"/><ellipse cx="98" cy="86" rx="6.5" ry="8" class="ink"/>
+          <circle cx="64.5" cy="82.5" r="2.6" class="hl"/><circle cx="100.5" cy="82.5" r="2.6" class="hl"/>
+          <circle cx="60" cy="90" r="1.2" class="hl"/><circle cx="96" cy="90" r="1.2" class="hl"/>
+          <path d="M73 101 Q76.5 105 80 101 Q83.5 105 87 101" class="line" fill="none" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
         </g>
         <g class="face face-think">
-          <path d="M61 55 L72 51 M88 53 L99 55" class="line" stroke-width="3" stroke-linecap="round"/>
-          <circle cx="70" cy="63" r="3.4" class="ink"/><circle cx="94" cy="63" r="3.4" class="ink"/>
-          <path d="M74 94 L86 93" class="line" fill="none" stroke-width="2.6" stroke-linecap="round"/>
+          <path d="M53 72 Q60 68 66 69 M94 69 Q100 68 107 72" class="line" fill="none" stroke-width="3" stroke-linecap="round"/>
+          <ellipse cx="60" cy="84" rx="6.5" ry="8" class="ink"/><ellipse cx="96" cy="84" rx="6.5" ry="8" class="ink"/>
+          <circle cx="58" cy="80.5" r="2.6" class="hl"/><circle cx="94" cy="80.5" r="2.6" class="hl"/>
+          <circle cx="83" cy="103" r="3.6" class="line" fill="none" stroke-width="2.6"/>
         </g>
         <g class="face face-idea">
-          <path d="M61 50 L72 48 M88 48 L99 50" class="line" stroke-width="3" stroke-linecap="round"/>
-          <circle cx="68" cy="65" r="5" class="eye-white"/><circle cx="92" cy="65" r="5" class="eye-white"/>
-          <circle cx="68" cy="65" r="2.8" class="ink"/><circle cx="92" cy="65" r="2.8" class="ink"/>
-          <ellipse cx="80" cy="95" rx="5" ry="5.5" class="ink"/>
-          <g class="spark"><path d="M22 30 l4 -10 l4 10 l10 4 l-10 4 l-4 10 l-4 -10 l-10 -4 Z"/></g>
+          <ellipse cx="62" cy="85" rx="8" ry="9.5" class="ink"/><ellipse cx="98" cy="85" rx="8" ry="9.5" class="ink"/>
+          <circle cx="65" cy="81" r="3.2" class="hl"/><circle cx="101" cy="81" r="3.2" class="hl"/>
+          <circle cx="59" cy="89.5" r="1.6" class="hl"/><circle cx="95" cy="89.5" r="1.6" class="hl"/>
+          <ellipse cx="80" cy="104" rx="5" ry="5.5" class="ink"/>
+          <ellipse cx="80" cy="107" rx="3" ry="1.8" class="tongue"/>
+          <g class="spark"><path d="M22 30 l4 -10 l4 10 l10 4 l-10 4 l-4 10 l-4 -10 l-10 -4 Z"/><path d="M140 14 l2 -5 l2 5 l5 2 l-5 2 l-2 5 l-2 -5 l-5 -2 Z"/></g>
         </g>
         <g class="face face-proud">
-          <path d="M61 55 L72 53 M88 53 L99 55" class="line" stroke-width="3" stroke-linecap="round"/>
-          <path d="M63 67 Q68 61 73 67 M87 67 Q92 61 97 67" class="line" fill="none" stroke-width="3" stroke-linecap="round"/>
-          <path d="M70 91 Q80 102 90 91 Z" class="ink"/>
+          <path d="M54 89 Q62 78 70 89 M90 89 Q98 78 106 89" class="line" fill="none" stroke-width="3.6" stroke-linecap="round"/>
+          <path d="M70 98 Q80 113 90 98 Z" class="ink"/>
+          <ellipse cx="80" cy="105.5" rx="4" ry="2.4" class="tongue"/>
         </g>
         <g class="face face-sad">
-          <path d="M62 53 L72 57 M88 57 L98 53" class="line" stroke-width="3" stroke-linecap="round"/>
-          <circle cx="68" cy="67" r="3.2" class="ink"/><circle cx="92" cy="67" r="3.2" class="ink"/>
-          <path d="M72 97 Q80 91 88 97" class="line" fill="none" stroke-width="2.6" stroke-linecap="round"/>
-          <path d="M112 50 q5 8 0 12 q-5 -4 0 -12 Z" class="sweat"/>
+          <path d="M55 80 L67 86 L55 92 M105 80 L93 86 L105 92" class="line" fill="none" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M71 105 q4.5 -4 9 0 q4.5 4 9 0" class="line" fill="none" stroke-width="2.6" stroke-linecap="round"/>
+          <path d="M122 56 q6 9 0 14 q-6 -5 0 -14 Z" class="sweat"/>
         </g>
       </svg>
       <div class="bubble" id="bubble" aria-live="polite"></div>

@@ -75,13 +75,16 @@ body {
 
 /* ---- ステージ（マエストロ＋吹き出し） ---- */
 .stage { display: flex; flex-direction: column; align-items: center; margin-top: 4px; }
-.maestro { width: 150px; height: auto; overflow: visible; }
+.maestro { width: 160px; height: auto; overflow: visible; }
 .maestro .tako { fill: var(--tako); stroke: var(--tako-edge); stroke-width: 1.5; }
-.maestro .leg { fill: none; stroke: var(--tako); stroke-width: 12; stroke-linecap: round; }
+.maestro .leg { fill: none; stroke: var(--tako); stroke-width: 17; stroke-linecap: round; }
 .maestro .suckers circle, .maestro .sucker { fill: var(--sucker); }
 .maestro .spot { fill: var(--spot); opacity: .8; }
+.maestro .shine { fill: #fff; opacity: .45; }
+.maestro .hl { fill: #fff; }
+.maestro .tongue { fill: #ff8fa3; }
 .maestro .tie { fill: var(--bowtie); }
-.maestro .cheek { fill: var(--cheek); opacity: .6; }
+.maestro .cheek { fill: var(--cheek); opacity: .75; }
 .maestro .ink { fill: var(--ink); }
 .maestro .line { stroke: var(--ink); }
 .maestro .eye-white { fill: #fff; stroke: var(--ink); stroke-width: 1.5; }
@@ -94,8 +97,8 @@ body {
 .maestro[data-mood="idea"] .face-idea,
 .maestro[data-mood="proud"] .face-proud,
 .maestro[data-mood="sad"] .face-sad { display: inline; }
-.maestro .arm { transform-origin: 106px 90px; transform-box: view-box; }
-.maestro .legs { transform-origin: 80px 100px; transform-box: view-box; }
+.maestro .arm { transform-origin: 126px 100px; transform-box: view-box; }
+.maestro .legs { transform-origin: 80px 120px; transform-box: view-box; }
 .maestro[data-mood="think"] .legs { animation: wiggle 2.4s ease-in-out infinite; }
 .maestro[data-mood="proud"] .legs { animation: wiggle .6s ease-in-out 2; }
 .maestro[data-mood="think"] .arm { animation: conduct 1.6s ease-in-out infinite; }
