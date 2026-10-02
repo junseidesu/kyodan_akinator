@@ -14,10 +14,10 @@
   --btn-border: #d9c7ad;
   --shadow: 0 1px 2px rgba(60, 35, 20, .08), 0 6px 18px rgba(60, 35, 20, .08);
 
-  --tako: #e8705f;          /* タコ */
-  --tako-edge: #c4503f;
-  --spot: #f39a8b;
-  --sucker: #fbd3c9;
+  --tako: #e4485c;          /* タコ（ぬいぐるみ風） */
+  --tako-edge: #c3354a;
+  --tako-tip: #f7a9b3;
+  --tako-mouth: #a92a3d;
   --bowtie: #1f1a24;
   --ink: #2a1d17;
   --cheek: #ff9fb0;
@@ -39,15 +39,15 @@
     --btn: #2b222e;
     --btn-border: #473a4a;
     --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 6px 18px rgba(0, 0, 0, .3);
-    --tako: #e27866;
-    --tako-edge: #b4513f;
+    --tako: #e2566a;
+    --tako-edge: #b8384c;
     --bowtie: #0d0a10;
   }
 }
 :root[data-theme="dark"] {
   --bg: #17121a; --bg-2: #1f1822; --surface: #251d28; --text: #f3eadf; --muted: #b5a699;
   --border: #3a2e3c; --accent: #c9485a; --accent-text: #fff; --gold: #e0b35a; --yes: #5cb88a;
-  --no: #e07a6a; --btn: #2b222e; --btn-border: #473a4a; --tako: #e27866; --tako-edge: #b4513f; --bowtie: #0d0a10;
+  --no: #e07a6a; --btn: #2b222e; --btn-border: #473a4a; --tako: #e2566a; --tako-edge: #b8384c; --bowtie: #0d0a10;
   --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 6px 18px rgba(0, 0, 0, .3);
 }
 
@@ -78,11 +78,12 @@ body {
 .maestro { width: 160px; height: auto; overflow: visible; }
 .maestro .tako { fill: var(--tako); stroke: var(--tako-edge); stroke-width: 1.5; }
 .maestro .leg { fill: none; stroke: var(--tako); stroke-width: 17; stroke-linecap: round; }
-.maestro .suckers circle, .maestro .sucker { fill: var(--sucker); }
-.maestro .spot { fill: var(--spot); opacity: .8; }
-.maestro .tongue { fill: #ff8fa3; }
+.maestro .leg-edge { fill: none; stroke: var(--tako-edge); stroke-width: 20; stroke-linecap: round; }
+.maestro .tip { fill: var(--tako-tip); stroke: var(--tako-edge); stroke-width: 1.2; }
+.maestro .mouth-outer { fill: var(--tako); stroke: var(--tako-edge); stroke-width: 1.5; }
+.maestro .mouth-inner { fill: var(--tako-mouth); }
 .maestro .tie { fill: var(--bowtie); }
-.maestro .cheek { fill: var(--cheek); opacity: .75; }
+.maestro .cheek { fill: var(--tako-tip); opacity: .7; }
 .maestro .ink { fill: var(--ink); }
 .maestro .line { stroke: var(--ink); }
 .maestro .eye-white { fill: #fff; stroke: var(--ink); stroke-width: 1.5; }
@@ -95,8 +96,8 @@ body {
 .maestro[data-mood="idea"] .face-idea,
 .maestro[data-mood="proud"] .face-proud,
 .maestro[data-mood="sad"] .face-sad { display: inline; }
-.maestro .arm { transform-origin: 126px 100px; transform-box: view-box; }
-.maestro .legs { transform-origin: 80px 120px; transform-box: view-box; }
+.maestro .arm { transform-origin: 92px 131px; transform-box: view-box; }
+.maestro .legs { transform-origin: 80px 128px; transform-box: view-box; }
 .maestro[data-mood="think"] .legs { animation: wiggle 2.4s ease-in-out infinite; }
 .maestro[data-mood="proud"] .legs { animation: wiggle .6s ease-in-out 2; }
 .maestro[data-mood="think"] .arm { animation: conduct 1.6s ease-in-out infinite; }
